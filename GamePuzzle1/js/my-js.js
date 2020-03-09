@@ -8,5 +8,5 @@ function changeImg(evt) {
         evt.src = "./img/kitty.jpg";
     } else if (srcImg.indexOf("kitty") > 0){
         evt.src = "./img/tiger.jpg";
-    } else evt.src = "./img/eagle.jpg"
+    } else evt.src = "./img/eagle.jpg";
 }

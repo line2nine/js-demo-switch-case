@@ -1,6 +1,5 @@
 function init() {
-let buttonMove = null;
-buttonMove = document.getElementById("no");
+let buttonMove = document.getElementById("no");
 buttonMove.style.position = 'relative';
 buttonMove.style.left = '0px';
 buttonMove.style.top = '0px';
