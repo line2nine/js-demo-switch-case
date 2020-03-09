@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập tháng và năm rồi cho biết tháng đó có bao nhiêu ngày-->
+<button onclick="tinhSoNgay()">Nhập tháng</button>
+<script>
+    function tinhSoNgay() {
+        let month = prompt("Nhập tháng:" );
+        month = parseInt(month);
+        let year = prompt("Nhập năm: ");
+        year = Number.parseInt(year);
+        alert("Tháng" + month + " /" + year + " có " + tinhNgay(month,year) + " ngày");
+    }
+
+    function tinhNgay(month, year) {
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: return 31;
+            case 4:
+            case 6:
+            case 9:
+            case 11: return 30;
+            case 2: if (checkLeapYear(year))
+                            return 29;
+                    else
+                            return 28;
+             default: return  "Không phải là tháng"
+        }
+    }
+    // Năm nhuận là những năm chia hết cho 400 hoặc chia hết cho 4 nhưng không chia hết cho 100
+    function checkLeapYear(year) {
+        return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="docso()">Nhập số</button>
+<script>
+    function doc1so(n) {
+        switch (n) {
+            case 0:
+                return " Không";
+            case 1:
+                return " Một";
+            case 2:
+                return " Hai";
+            case 3:
+                return " Ba";
+            case 4:
+                return " Bốn";
+            case 5:
+                return " Năm";
+            case 6:
+                return " Sáu";
+            case 7:
+                return " Bảy";
+            case 8:
+                return " Tám";
+            case 9:
+                return " Chín";
+            default :
+                return " Không biết";
+        }
+    }
+
+    function doc3so(n) {
+        let tram = Math.floor(n / 100);
+        let chuc = Math.floor(n / 10) % 10; //123/10 = 12, sau đó tiếp 12 % 10 = 2
+        let donvi = n % 10;
+        let str = "";
+        str += doc1so(tram) + " trăm";
+        if (chuc == 0)
+        str += " linh";
+    else
+        str += doc1so(chuc) + " mươi";
+        str += doc1so(donvi);
+        return str;
+    }
+
+    function docso() {
+        let n = prompt("Nhập vào vào số có 1 chữ số");
+        n = Number.parseInt(n);
+        alert(doc3so(n));
+    }
+</script>
+</body>
+</html>
