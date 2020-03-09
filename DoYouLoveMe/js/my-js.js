@@ -17,9 +17,11 @@ function disagree() {
     buttonMove.style.left =  Math.random()*w + 'px';
     buttonMove.style.top = Math.random()*h + 'px';
     buttonMove.style.position = 'fixed';
-
+    buttonMove.onclick = function () {
+        alert("Thật luôn?");
+    }
 }
 
 function agree() {
-    alert("Mỡ đấy mà húp =))");
+    alert("Mỡ đấy mà húp");
 }
