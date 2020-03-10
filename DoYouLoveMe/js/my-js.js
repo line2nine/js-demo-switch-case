@@ -10,11 +10,9 @@ window.innerWidth = 1280;
 window.innerHeight = 720;
 
 function disagree() {
-    let widthWindow = window.innerWidth;
-    let heightWindow = window.innerHeight;
     let buttonMove = document.getElementById("no");
-    buttonMove.style.left =  Math.random()*widthWindow + 'px';
-    buttonMove.style.top = Math.random()*heightWindow + 'px';
+    buttonMove.style.left =  Math.random()*window.innerWidth + 'px';
+    buttonMove.style.top = Math.random()*window.innerHeight + 'px';
     buttonMove.style.position = 'fixed';
     buttonMove.onclick = function () {
         alert("Thật luôn?");
